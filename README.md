@@ -26,10 +26,21 @@ nothing is persisted.
 
 ## Install (development)
 
-Copy or symlink this folder into your QGIS profile's plugin directory:
+Copy or symlink this folder into your QGIS profile's plugin directory.
+
+**Linux / macOS:**
 
 ```bash
 ln -s "$PWD" ~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/directory_sync
+```
+
+**Windows:**
+
+Create a directory junction (no admin rights required) from a `cmd` prompt,
+pointing the QGIS plugins folder at this repo:
+
+```bat
+mklink /J "%APPDATA%\QGIS\QGIS3\profiles\default\python\plugins\directory_sync" "C:\path\to\qgis-directory-sync"
 ```
 
 Then enable **Directory Sync** in *Plugins → Manage and Install Plugins → Installed*.
